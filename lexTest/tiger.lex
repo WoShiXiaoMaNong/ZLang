@@ -17,8 +17,8 @@ if		{ADJ;printf("IF \n");return IF;}
 
 [a-zA-Z][0-9a-zA-Z]*	{ADJ;yylval.sval=String(yytext);printf("ID (value %s)\n",yylval.sval);return ID;}
  /*Number*/
-[0-9]+		{ADJ;yylval.ival=atoi(yytext);printf("INT10 (value %d)\n",yylval.ival); return NUM;}
-[0-9]+"."[0-9]+		{ADJ;yylval.fval=atof(yytext);printf("Float (value %f)\n",yylval.fval);return REAL;}
+{digits}		{ADJ;yylval.ival=atoi(yytext);printf("INT10 (value %d)\n",yylval.ival); return NUM;}
+{digits}"."{digits}		{ADJ;yylval.fval=atof(yytext);printf("Float (value %f)\n",yylval.fval);return REAL;}
  /* Comments & blank*/
 "--".*$	{ADJ;}
 
