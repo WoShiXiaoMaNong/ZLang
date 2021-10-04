@@ -10,7 +10,7 @@
 #define LET		5
 #define IN		6
 #define END		7
-#define FUNCTION	8
+#define FUNC		8
 #define VAR		9
 #define TYPE		10
 #define ARRAY		11
@@ -39,6 +39,10 @@
 #define RBRACE		27 // }
 #define BANG		28 // !
 #define SEML		29 // ;
+#define ASSGIN		30 // :=
 
+#define EQU		31 // =
+#define LSQUAREBRACKET 	32 // [
+#define RSQUAREBRACKET 	32 // ]
 
 #endif
